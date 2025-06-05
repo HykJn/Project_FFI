@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Item
+  - Plant
+  - Light2D
+  - Animal
+  - Button
+  - Slider
+  - Mole
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Lit
+    uniqueID: 536999463
+    locked: 0
+  - name: Unlit
+    uniqueID: 3612856411
+    locked: 0
+  - name: UI
+    uniqueID: 1474054767
+    locked: 0
+  m_RenderingLayers:
+  - Default

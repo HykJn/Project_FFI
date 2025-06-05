@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805d56f6ebc1a464d8de3133765be7f6, type: 3}
+  m_Name: Eggplant_Plant
+  m_EditorClassIdentifier: 
+  id: 12290
+  itemName: "\uC2EC\uC5B4\uC9C4 \uAC00\uC9C0"
+  description: "\uBB34\uB7ED\uBB34\uB7ED \uC790\uB77C\uB294 \uC911!"
+  itemSprite: {fileID: -192928032, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
+  cropID: 16386
+  spritesEachSteps:
+  - {fileID: 569098539, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
+  - {fileID: 649138942, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
+  - {fileID: 1178455951, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
+  - {fileID: -192928032, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
+  maxDropAmount: 5
+  minDropAmount: 2
