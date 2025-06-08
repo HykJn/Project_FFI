@@ -95,7 +95,7 @@ public class ObjectManager : MonoBehaviour
     private const ushort cnt_Egg_Normal = 1024;
     private const ushort cnt_Egg_Chicken = 1024;
     //private Transform pool_Animal_Basic_Mole;
-    private const ushort cnt_Animal_Basic_Mole = 4;
+    private const ushort cnt_Animal_Basic_Mole = 32;
     //Props
     private const ushort cnt_Store_Item = 32;
     private const ushort cnt_Store_Obj = 32;
@@ -553,6 +553,15 @@ public class ObjectManager : MonoBehaviour
             
             //Lands
             ItemID.LAND_LIGHT_GRASS => prefab_Land_Light_Grass,
+
+            //Tree
+            ItemID.TREE_DEFAULT => prefab_Tree_Default,
+
+            //Wood
+            ItemID.WOOD_LOG => prefab_Wood_Log,
+            ItemID.WOOD_BRANCH => prefab_Wood_Branch,
+            ItemID.WOOD_STICK => prefab_Wood_Stick,
+            ItemID.WOOD_PLANK => prefab_Wood_Plank,
 
             //Default
             _ => null,

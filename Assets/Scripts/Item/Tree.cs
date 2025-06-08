@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tree : Item
@@ -11,6 +12,11 @@ public class Tree : Item
     #endregion
 
     #region ==========Unity Methods==========
+    private void OnEnable()
+    {
+        Init();
+    }
+
     private void Update()
     {
         if (chopCount < 3)
@@ -35,6 +41,7 @@ public class Tree : Item
     {
         this.chopCount--;
         resetTick = 0;
+        this.GetComponent<Animator>().SetTrigger("Hit");
         if (chopCount <= 0)
         {
             int rand = Random.Range(1, 3);
@@ -49,7 +56,7 @@ public class Tree : Item
                 GameObject obj = ObjectManager.Instance.GetInstance(ItemID.WOOD_LOG);
                 obj.transform.position = this.transform.position;
             }
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
     #endregion

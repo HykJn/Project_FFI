@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25de5c203a1e244a9fd828c2e5ed1e9, type: 3}
+  m_Script: {fileID: 11500000, guid: ee04d5436d1cef04ab2f80896a59e0d6, type: 3}
   m_Name: Wood_Branch
   m_EditorClassIdentifier: 
   id: 49154
   itemName: "\uB098\uBB47\uAC00\uC9C0"
   description: "\uC9C0\uB801\uC774\uB97C \uCC0C\uB974\uBA74 \uC548\uB3FC\uC694!"
   itemSprite: {fileID: -8106913210018680474, guid: 5244560bc94988c49906de82bc109798, type: 3}
+  price: 10

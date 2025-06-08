@@ -46,7 +46,6 @@ public class StoreObj : PropObj, IIneteractable, IRemovable
         }
         GameObject temp = ObjectManager.Instance.GetInstance(ItemID.PROP_STORE_ITEM, true);
         temp.transform.position = this.transform.position;
-        this.gameObject.SetActive(false);
-        this.enabled = false;
+        Destroy(this.gameObject);
     }
 }

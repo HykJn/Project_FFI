@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LoadingUI loadingUI;
 
     [Header("New Game")]
-    private int startGolds = 15000;
+    private int startGolds = 500;
     #endregion
 
     #region Unity
@@ -259,7 +259,7 @@ public class GameManager : MonoBehaviour
         {
             timerTick += Time.deltaTime;
         }
-        if (timerTick >= 45f)
+        if (timerTick >= 30f)
         {
             timerTick = 0;
             curTime += MINUITES_OF_DAY / minuitesPerDay;

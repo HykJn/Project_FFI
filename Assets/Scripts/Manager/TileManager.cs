@@ -273,12 +273,18 @@ public class TileManager : MonoBehaviour
                 return true;
             }
         }
-        else if (TryGetPlant(pos, out Plant plant))
+        else
         {
-            //TODO: If Plant is Tree...
-            QuestManager.OnQuestProceed?.Invoke(ActionID.CutTree, 1);
+            for (int i = 0; i < layer_Props.Length; i++)
+            {
+                if(TryGetItem<Tree>(pos, layer_Props[i], out Tree tree))
+                {
+                    tree.Chop();
+                    QuestManager.OnQuestProceed?.Invoke(ActionID.CutTree, 1);
+                    return true;
+                }
+            }
         }
-
         return false;
     }
 
