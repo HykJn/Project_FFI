@@ -205,6 +205,15 @@ public class TileManager : MonoBehaviour
     {
         if (!tileData.ContainsKey(pos)) return false;
 
+        for (int i = 0; i < layer_Props.Length; i++)
+        {
+            if (TryGetItem<Item>(pos, layer_Props[i], out Item item))
+            {
+                return false;
+            }
+        }
+
+
         //Check mole exist in pos
         RaycastHit2D hit = Physics2D.BoxCast(pos, Vector2.one, 0, Vector3.forward);
         if (hit && hit.collider.CompareTag("Mole"))
@@ -241,13 +250,16 @@ public class TileManager : MonoBehaviour
 
         if (TryGetPlant(pos, out Plant plant))
         {
-            if (plant.Growth == 3)
+            if (plant.Growth == plant.MaxGrowth)
             {
                 plant.DropCrops();
                 ActionID action = plant.CropID switch
                 {
                     ItemID.CROP_CARROT => ActionID.HarvestCarrot,
                     ItemID.CROP_EGGPLANT => ActionID.HarvestEggplant,
+                    ItemID.CROP_TOMATO => ActionID.HarvestTomato,
+                    ItemID.CROP_CORN => ActionID.HarvestCorn,
+                    ItemID.CROP_PUMPKIN => ActionID.HarvestPumpkin,
                 };
                 QuestManager.OnQuestProceed?.Invoke(action, 1);
                 return true;
@@ -277,7 +289,7 @@ public class TileManager : MonoBehaviour
         {
             for (int i = 0; i < layer_Props.Length; i++)
             {
-                if(TryGetItem<Tree>(pos, layer_Props[i], out Tree tree))
+                if (TryGetItem<Tree>(pos, layer_Props[i], out Tree tree))
                 {
                     tree.Chop();
                     QuestManager.OnQuestProceed?.Invoke(ActionID.CutTree, 1);
@@ -476,6 +488,33 @@ public class TileManager : MonoBehaviour
         GameObject itemObj = layer.GetInstantiatedObject((Vector3Int)position);
         if (itemObj != null) return itemObj.TryGetComponent<T>(out item);
         item = null; return false;
+    }
+
+    public Vector2 GetRandomPos(Vector2Int origin)
+    {
+        float randX = UnityEngine.Random.Range(-1f, 1f);
+        float randY = UnityEngine.Random.Range(-1f, 1f);
+        Vector2Int temp = Vector2Int.RoundToInt(new Vector2(origin.x + randX, origin.y + randY));
+        if (!HasLand(temp))
+        {
+            return GetRandomPos(origin);
+        }
+        return new Vector2(randX + origin.x, randY + origin.y);
+    }
+
+    public IEnumerator DropItemSpread(GameObject item, Vector2 destination)
+    {
+        if (item == null) yield break;
+
+        Vector2 start = item.transform.position;
+        float t = 0;
+        do
+        {
+            t += Time.deltaTime * 3f;
+            item.transform.position = Vector2.Lerp(start, destination, t);
+            yield return new WaitForEndOfFrame();
+        } while (Vector2.Distance(item.transform.position, destination) > 0.1f);
+        item.transform.position = destination;
     }
 
     public bool SpawnAnimal(Vector2Int position, GameObject animal)

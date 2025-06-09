@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338e7b63db526c049a1f7b909d184af9, type: 3}
   m_Name: Store
   m_EditorClassIdentifier: 
-  id: 24592
+  id: 28688
   itemName: "\uC0C1\uC810"
   description: "\uBB3C\uAC74\uC744 \uC0AC\uACE0\uD314\uACE0!"
   itemSprite: {fileID: 3917693782700221454, guid: 4e04bdfa078a6734f9dd2e9d9870b451, type: 3}
-  propID: 24593
+  propID: 28689

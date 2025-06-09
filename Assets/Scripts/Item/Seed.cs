@@ -50,6 +50,9 @@ public class Seed : Item, IUsableItem, IAmount
             {
                 ItemID.PLANT_CARROT => ActionID.PlantCarrot,
                 ItemID.PLANT_EGGPLANT => ActionID.PlantEggplant,
+                ItemID.PLANT_TOMATO => ActionID.PlantTomato,
+                ItemID.PLANT_PUMPKIN => ActionID.PlantPumpkin,
+                ItemID.PLANT_CORN => ActionID.PlantCorn,
             };
             QuestManager.OnQuestProceed?.Invoke(actionID, 1);
         }

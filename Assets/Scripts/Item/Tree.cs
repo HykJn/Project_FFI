@@ -49,12 +49,19 @@ public class Tree : Item
             {
                 GameObject obj = ObjectManager.Instance.GetInstance(ItemID.WOOD_BRANCH);
                 obj.transform.position = this.transform.position;
+
+                Vector2 randPos = TileManager.Instance.GetRandomPos(Vector2Int.RoundToInt(this.transform.position));
+                obj.GetComponent<MonoBehaviour>().StartCoroutine(TileManager.Instance.DropItemSpread(obj, randPos));
+                
             }
             rand = Random.Range(2, 4);
             for (int i = 0; i < rand; i++)
             {
                 GameObject obj = ObjectManager.Instance.GetInstance(ItemID.WOOD_LOG);
                 obj.transform.position = this.transform.position;
+
+                Vector2 randPos = TileManager.Instance.GetRandomPos(Vector2Int.RoundToInt(this.transform.position));
+                obj.GetComponent<MonoBehaviour>().StartCoroutine(TileManager.Instance.DropItemSpread(obj, randPos));
             }
             Destroy(this.gameObject);
         }

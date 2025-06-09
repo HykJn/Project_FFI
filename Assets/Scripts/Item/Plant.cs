@@ -9,7 +9,7 @@ public class Plant : Item
         get => new(ID, Growth);
         set
         {
-            if(value.itemID != ID) return;
+            if (value.itemID != ID) return;
             if (value.value1 < 0 || value.value1 > 3) return;
             Growth = value.value1;
         }
@@ -20,6 +20,7 @@ public class Plant : Item
     public int MaxDropAmount => Base.MaxDropAmount;
     public int MinDropAmount => Base.MinDropAmount;
     public int Growth { get; set; }
+    public int MaxGrowth => Base.MaxGrowth;
     [Obsolete] public bool Witherable { get; set; } = false;
     public int DropAmount { get; set; }
 
@@ -74,19 +75,29 @@ public class Plant : Item
 
     public void DropCrops()
     {
-        if (Growth < 3) return;
+        if (Growth < MaxGrowth) return;
 
         //Set random drop amount
-        DropAmount = UnityEngine.Random.Range(MinDropAmount, MaxDropAmount);
+        DropAmount = UnityEngine.Random.Range(MinDropAmount, MaxDropAmount + 1);
 
         //Drop
-        for(int i = 0; i< DropAmount; i++)
+        for (int i = 0; i < DropAmount; i++)
         {
             GameObject temp = ObjectManager.Instance.GetInstance(CropID, true);
-            SetGrade(temp.GetComponent<Crop>());
             temp.transform.position = this.transform.position;
+
+            Vector2 randPos = TileManager.Instance.GetRandomPos(Vector2Int.RoundToInt(this.transform.position));            
+            temp.GetComponent<MonoBehaviour>().StartCoroutine(TileManager.Instance.DropItemSpread(temp, randPos));
+
+            SetGrade(temp.GetComponent<Crop>());
         }
-        Wither();
+
+        if (ID == ItemID.PLANT_CORN)
+        {
+            Growth--;
+            this.GetComponent<SpriteRenderer>().sprite = SpritesEachSteps[Growth];
+        }
+        else Wither();
     }
     #endregion
 }

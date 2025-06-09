@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -16,21 +17,34 @@ public class ObjectManager : MonoBehaviour
     //Seeds
     [SerializeField] private GameObject prefab_Seed_Carrot;
     [SerializeField] private GameObject prefab_Seed_EggPlant;
+    [SerializeField] private GameObject prefab_Seed_Corn;
+    [SerializeField] private GameObject prefab_Seed_Pumpkin;
+    [SerializeField] private GameObject prefab_Seed_Tomato;
     //Plants
     [SerializeField] private GameObject prefab_Plant_Carrot;
     [SerializeField] private GameObject prefab_Plant_EggPlant;
+    [SerializeField] private GameObject prefab_Plant_Corn;
+    [SerializeField] private GameObject prefab_Plant_Pumpkin;
+    [SerializeField] private GameObject prefab_Plant_Tomato;
     //Crops
     [SerializeField] private GameObject prefab_Crop_Carrot;
     [SerializeField] private GameObject prefab_Crop_EggPlant;
+    [SerializeField] private GameObject prefab_Crop_Corn;
+    [SerializeField] private GameObject prefab_Crop_Pumpkin;
+    [SerializeField] private GameObject prefab_Crop_Tomato;
+    //Spawn
+    [SerializeField] private GameObject prefab_Spawn_Egg_Chicken;
+    [SerializeField] private GameObject prefab_Spawn_Egg_Cow;
     //Eggs
     [SerializeField] private GameObject prefab_Egg_Normal;
-    [SerializeField] private GameObject prefab_Egg_Chicken;
+    //Milk
+    [SerializeField] private GameObject prefab_Milk_Normal;
     //Props
     [SerializeField] private GameObject prefab_Store_Item;
     [SerializeField] private GameObject prefab_Store_Obj;
     //Animals
     [SerializeField] private GameObject prefab_Animal_Basic_Chicken;
-    //[SerializeField] private GameObject prefab_Animal_Basic_Cow;
+    [SerializeField] private GameObject prefab_Animal_Basic_Cow;
     [SerializeField] private GameObject prefab_Animal_Basic_Mole;
     //Lands
     [SerializeField] private GameObject prefab_Land_Light_Grass;
@@ -50,21 +64,34 @@ public class ObjectManager : MonoBehaviour
     //Seeds
     private Transform pool_Seed_Carrot;
     private Transform pool_Seed_EggPlant;
+    private Transform pool_Seed_Corn;
+    private Transform pool_Seed_Pumpkin;
+    private Transform pool_Seed_Tomato;
     //Plants
     private Transform pool_Plant_Carrot;
     private Transform pool_Plant_EggPlant;
+    private Transform pool_Plant_Corn;
+    private Transform pool_Plant_Pumpkin;
+    private Transform pool_Plant_Tomato;
     //Crops
     private Transform pool_Crop_Carrot;
     private Transform pool_Crop_EggPlant;
+    private Transform pool_Crop_Corn;
+    private Transform pool_Crop_Pumpkin;
+    private Transform pool_Crop_Tomato;
+    //Spawn Eggs
+    private Transform pool_Spawn_Egg_Chicken;
+    private Transform pool_Spawn_Egg_Cow;
     //Eggs
     private Transform pool_Egg_Normal;
-    private Transform pool_Egg_Chicken;
+    //Milk
+    private Transform pool_Milk_Normal;
     //Props
     private Transform pool_Store_Item;
     private Transform pool_Store_Obj;
     //Animals
     private Transform pool_Animal_Basic_Chicken;
-    //private Transform pool_Animal_Basic_Cow;
+    private Transform pool_Animal_Basic_Cow;
     private Transform pool_Animal_Basic_Mole;
     //Lands
     private Transform pool_Land_Light_Grass;
@@ -85,23 +112,35 @@ public class ObjectManager : MonoBehaviour
     //Seeds
     private const ushort cnt_Seed_Carrot = 1024;
     private const ushort cnt_Seed_EggPlant = 1024;
+    private const ushort cnt_Seed_Corn = 1024;
+    private const ushort cnt_Seed_Pumpkin = 1024;
+    private const ushort cnt_Seed_Tomato = 1024;
     //Plants
     private const ushort cnt_Plant_Carrot = 10;
     private const ushort cnt_Plant_EggPlant = 10;
+    private const ushort cnt_Plant_Corn = 10;
+    private const ushort cnt_Plant_Pumpkin = 10;
+    private const ushort cnt_Plant_Tomato = 10;
     //Crops
     private const ushort cnt_Crop_Carrot = 1024;
     private const ushort cnt_Crop_EggPlant = 1024;
+    private const ushort cnt_Crop_Corn = 1024;
+    private const ushort cnt_Crop_Pumpkin = 1024;
+    private const ushort cnt_Crop_Tomato = 1024;
+    //Spawn Eggs
+    private const ushort cnt_Spawn_Egg_Chicken = 1024;
+    private const ushort cnt_Spawn_Egg_Cow = 1024;
     //Eggs
     private const ushort cnt_Egg_Normal = 1024;
-    private const ushort cnt_Egg_Chicken = 1024;
-    //private Transform pool_Animal_Basic_Mole;
-    private const ushort cnt_Animal_Basic_Mole = 32;
+    //Milk
+    private const ushort cnt_Milk_Normal = 1024;
     //Props
     private const ushort cnt_Store_Item = 32;
     private const ushort cnt_Store_Obj = 32;
     //Animals
     private const ushort cnt_Animal_Basic_Chicken = 64;
     private const ushort cnt_Animal_Basic_Cow = 64;
+    private const ushort cnt_Animal_Basic_Mole = 32;
     //Lands
     private const ushort cnt_Land_Light_Grass = 1024;
     //Tree
@@ -212,6 +251,39 @@ public class ObjectManager : MonoBehaviour
                         obj.SetActive(false);
                     }
                 }
+                //Corn
+                pool_Seed_Corn = new GameObject("Corn").transform;
+                pool_Seed_Corn.SetParent(p_Seed);
+                {
+                    parent = pool_Seed_Corn;
+                    for (int i = 0; i < cnt_Seed_Corn; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Seed_Corn, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Pumpkin
+                pool_Seed_Pumpkin = new GameObject("Pumpkin").transform;
+                pool_Seed_Pumpkin.SetParent(p_Seed);
+                {
+                    parent = pool_Seed_Pumpkin;
+                    for (int i = 0; i < cnt_Seed_Pumpkin; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Seed_Pumpkin, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tomato
+                pool_Seed_Tomato = new GameObject("Tomato").transform;
+                pool_Seed_Tomato.SetParent(p_Seed);
+                {
+                    parent = pool_Seed_Tomato;
+                    for (int i = 0; i < cnt_Seed_Tomato; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Seed_Tomato, parent);
+                        obj.SetActive(false);
+                    }
+                }
                 DontDestroyOnLoad(p_Seed.gameObject);
             }
             //Plants
@@ -236,6 +308,39 @@ public class ObjectManager : MonoBehaviour
                     for (int i = 0; i < cnt_Plant_EggPlant; i++)
                     {
                         GameObject obj = Instantiate(prefab_Plant_EggPlant, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Corn
+                pool_Plant_Corn = new GameObject("Corn").transform;
+                pool_Plant_Corn.SetParent(p_Plant);
+                {
+                    parent = pool_Plant_Corn;
+                    for (int i = 0; i < cnt_Plant_Corn; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Plant_Corn, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Pumpkin
+                pool_Plant_Pumpkin = new GameObject("Pumpkin").transform;
+                pool_Plant_Pumpkin.SetParent(p_Plant);
+                {
+                    parent = pool_Plant_Pumpkin;
+                    for (int i = 0; i < cnt_Plant_Pumpkin; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Plant_Pumpkin, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tomato
+                pool_Plant_Tomato = new GameObject("Tomato").transform;
+                pool_Plant_Tomato.SetParent(p_Plant);
+                {
+                    parent = pool_Plant_Tomato;
+                    for (int i = 0; i < cnt_Plant_Tomato; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Plant_Tomato, parent);
                         obj.SetActive(false);
                     }
                 }
@@ -266,7 +371,67 @@ public class ObjectManager : MonoBehaviour
                         obj.SetActive(false);
                     }
                 }
+                //Corn
+                pool_Crop_Corn = new GameObject("Corn").transform;
+                pool_Crop_Corn.SetParent(p_Crop);
+                {
+                    parent = pool_Crop_Corn;
+                    for (int i = 0; i < cnt_Crop_Corn; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Crop_Corn, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Pumpkin
+                pool_Crop_Pumpkin = new GameObject("Pumpkin").transform;
+                pool_Crop_Pumpkin.SetParent(p_Crop);
+                {
+                    parent = pool_Crop_Pumpkin;
+                    for (int i = 0; i < cnt_Crop_Pumpkin; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Crop_Pumpkin, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tomato
+                pool_Crop_Tomato = new GameObject("Tomato").transform;
+                pool_Crop_Tomato.SetParent(p_Crop);
+                {
+                    parent = pool_Crop_Tomato;
+                    for (int i = 0; i < cnt_Crop_Tomato; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Crop_Tomato, parent);
+                        obj.SetActive(false);
+                    }
+                }
                 DontDestroyOnLoad(p_Crop.gameObject);
+            }
+            //Spawn Eggs
+            Transform t_Spawn_Egg = new GameObject("Spawn_Egg").transform;
+            {
+                //Chicken
+                pool_Spawn_Egg_Chicken = new GameObject("Chicken").transform;
+                pool_Spawn_Egg_Chicken.SetParent(t_Spawn_Egg);
+                {
+                    parent = pool_Spawn_Egg_Chicken;
+                    for (int i = 0; i < cnt_Spawn_Egg_Chicken; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Spawn_Egg_Chicken, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Cow
+                pool_Spawn_Egg_Cow = new GameObject("Cow").transform;
+                pool_Spawn_Egg_Cow.SetParent(t_Spawn_Egg);
+                {
+                    parent = pool_Spawn_Egg_Cow;
+                    for (int i = 0; i < cnt_Spawn_Egg_Cow; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Spawn_Egg_Cow, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                DontDestroyOnLoad(t_Spawn_Egg.gameObject);
             }
             //Eggs
             Transform p_Egg = new GameObject("Egg").transform;
@@ -282,18 +447,22 @@ public class ObjectManager : MonoBehaviour
                         obj.SetActive(false);
                     }
                 }
-                //Chicken
-                pool_Egg_Chicken = new GameObject("Chicken").transform;
-                pool_Egg_Chicken.SetParent(p_Egg);
+                DontDestroyOnLoad(p_Egg.gameObject);
+            }
+            //Milk
+            Transform p_Milk = new GameObject("Milk").transform;
+            {
+                pool_Milk_Normal = new GameObject("Normal").transform;
+                pool_Milk_Normal.SetParent(p_Milk);
                 {
-                    parent = pool_Egg_Chicken;
-                    for (int i = 0; i < cnt_Egg_Chicken; i++)
+                    parent = pool_Milk_Normal;
+                    for (int i = 0; i < cnt_Milk_Normal; i++)
                     {
-                        GameObject obj = Instantiate(prefab_Egg_Chicken, parent);
+                        GameObject obj = Instantiate(prefab_Milk_Normal, parent);
                         obj.SetActive(false);
                     }
                 }
-                DontDestroyOnLoad(p_Egg.gameObject);
+                DontDestroyOnLoad(p_Milk.gameObject);
             }
             //Props
             Transform p_Prop = new GameObject("Prop").transform;
@@ -337,6 +506,22 @@ public class ObjectManager : MonoBehaviour
                         for (int i = 0; i < cnt_Animal_Basic_Chicken; i++)
                         {
                             GameObject obj = Instantiate(prefab_Animal_Basic_Chicken, parent);
+                            obj.SetActive(false);
+                        }
+                    }
+                }
+                //Cow
+                Transform p_Cow = new GameObject("Cow").transform;
+                p_Cow.SetParent(p_Animal);
+                {
+                    //Basic
+                    pool_Animal_Basic_Cow = new GameObject("Basic").transform;
+                    pool_Animal_Basic_Cow.SetParent(p_Cow);
+                    {
+                        parent = pool_Animal_Basic_Cow;
+                        for (int i = 0; i < cnt_Animal_Basic_Cow; i++)
+                        {
+                            GameObject obj = Instantiate(prefab_Animal_Basic_Cow, parent);
                             obj.SetActive(false);
                         }
                     }
@@ -462,18 +647,33 @@ public class ObjectManager : MonoBehaviour
             //Seeds
             ItemID.SEED_CARROT => pool_Seed_Carrot,
             ItemID.SEED_EGGPLANT => pool_Seed_EggPlant,
+            ItemID.SEED_CORN => pool_Seed_Corn,
+            ItemID.SEED_PUMPKIN => pool_Seed_Pumpkin,
+            ItemID.SEED_TOMATO => pool_Seed_Tomato,
 
             //Plants
             ItemID.PLANT_CARROT => pool_Plant_Carrot,
             ItemID.PLANT_EGGPLANT => pool_Plant_EggPlant,
+            ItemID.PLANT_CORN => pool_Plant_Corn,
+            ItemID.PLANT_PUMPKIN => pool_Plant_Pumpkin,
+            ItemID.PLANT_TOMATO => pool_Plant_Tomato,
 
             //Crops
             ItemID.CROP_CARROT => pool_Crop_Carrot,
             ItemID.CROP_EGGPLANT => pool_Crop_EggPlant,
+            ItemID.CROP_CORN => pool_Crop_Corn,
+            ItemID.CROP_PUMPKIN => pool_Crop_Pumpkin,
+            ItemID.CROP_TOMATO => pool_Crop_Tomato,
+
+            //Spawn Eggs
+            ItemID.SPAWN_EGG_CHICKEN => pool_Spawn_Egg_Chicken,
+            ItemID.SPAWN_EGG_COW => pool_Spawn_Egg_Cow,
 
             //Eggs
             ItemID.EGG_NORMAL => pool_Egg_Normal,
-            ItemID.EGG_CHICKEN => pool_Egg_Chicken,
+
+            //Milk
+            ItemID.MILK_NORMAL => pool_Milk_Normal,
 
             //Props
             ItemID.PROP_STORE_ITEM => pool_Store_Item,
@@ -481,6 +681,7 @@ public class ObjectManager : MonoBehaviour
 
             //Animals
             ItemID.ANIMAL_CHICKEN_BASIC => pool_Animal_Basic_Chicken,
+            ItemID.ANIMAL_COW_BASIC => pool_Animal_Basic_Cow,
             ItemID.ANIMAL_MOLE => pool_Animal_Basic_Mole,
 
             //Lands
@@ -530,18 +731,33 @@ public class ObjectManager : MonoBehaviour
             //Seeds
             ItemID.SEED_CARROT => prefab_Seed_Carrot,
             ItemID.SEED_EGGPLANT => prefab_Seed_EggPlant,
+            ItemID.SEED_CORN => prefab_Seed_Corn,
+            ItemID.SEED_PUMPKIN => prefab_Seed_Pumpkin,
+            ItemID.SEED_TOMATO => prefab_Seed_Tomato,
 
             //Plants
             ItemID.PLANT_CARROT => prefab_Plant_Carrot,
             ItemID.PLANT_EGGPLANT => prefab_Plant_EggPlant,
+            ItemID.PLANT_CORN => prefab_Plant_Corn,
+            ItemID.PLANT_PUMPKIN => prefab_Plant_Pumpkin,
+            ItemID.PLANT_TOMATO => prefab_Plant_Tomato,
 
             //Crops
             ItemID.CROP_CARROT => prefab_Crop_Carrot,
             ItemID.CROP_EGGPLANT => prefab_Crop_EggPlant,
+            ItemID.CROP_CORN => prefab_Crop_Corn,
+            ItemID.CROP_PUMPKIN => prefab_Crop_Pumpkin,
+            ItemID.CROP_TOMATO => prefab_Crop_Tomato,
+
+            //Spawn Eggs
+            ItemID.SPAWN_EGG_CHICKEN => prefab_Spawn_Egg_Chicken,
+            ItemID.SPAWN_EGG_COW => prefab_Spawn_Egg_Cow,
 
             //Eggs
             ItemID.EGG_NORMAL => prefab_Egg_Normal,
-            ItemID.EGG_CHICKEN => prefab_Egg_Chicken,
+
+            //Milk
+            ItemID.MILK_NORMAL => prefab_Milk_Normal,
 
             //Props
             ItemID.PROP_STORE_ITEM => prefab_Store_Item,
@@ -549,6 +765,7 @@ public class ObjectManager : MonoBehaviour
 
             //Animals
             ItemID.ANIMAL_CHICKEN_BASIC => prefab_Animal_Basic_Chicken,
+            ItemID.ANIMAL_COW_BASIC => prefab_Animal_Basic_Cow,
             ItemID.ANIMAL_MOLE => prefab_Animal_Basic_Mole,
             
             //Lands
@@ -587,18 +804,33 @@ public class ObjectManager : MonoBehaviour
                 //Seed
                 ItemID.SEED_CARROT => pool_Seed_Carrot,
                 ItemID.SEED_EGGPLANT => pool_Seed_EggPlant,
+                ItemID.SEED_CORN => pool_Seed_Corn,
+                ItemID.SEED_PUMPKIN => pool_Seed_Pumpkin,
+                ItemID.SEED_TOMATO => pool_Seed_Tomato,
 
                 //Plant
                 ItemID.PLANT_CARROT => pool_Plant_Carrot,
                 ItemID.PLANT_EGGPLANT => pool_Plant_EggPlant,
+                ItemID.PLANT_CORN => pool_Plant_Corn,
+                ItemID.PLANT_PUMPKIN => pool_Plant_Pumpkin,
+                ItemID.PLANT_TOMATO => pool_Plant_Tomato,
 
                 //Crop
                 ItemID.CROP_CARROT => pool_Crop_Carrot,
                 ItemID.CROP_EGGPLANT => pool_Crop_EggPlant,
+                ItemID.CROP_CORN => pool_Crop_Corn,
+                ItemID.CROP_PUMPKIN => pool_Crop_Pumpkin,
+                ItemID.CROP_TOMATO => pool_Crop_Tomato,
+
+                //Spawn Egg
+                ItemID.SPAWN_EGG_CHICKEN => pool_Spawn_Egg_Chicken,
+                ItemID.SPAWN_EGG_COW => pool_Spawn_Egg_Cow,
 
                 //Egg
                 ItemID.EGG_NORMAL => pool_Egg_Normal,
-                ItemID.EGG_CHICKEN => pool_Egg_Chicken,
+
+                //Milk
+                ItemID.MILK_NORMAL => pool_Milk_Normal,
 
                 //Prop
                 ItemID.PROP_STORE_ITEM => pool_Store_Item,
@@ -627,6 +859,7 @@ public class ObjectManager : MonoBehaviour
             {
                 //Animal
                 ItemID.ANIMAL_CHICKEN_BASIC => pool_Animal_Basic_Chicken,
+                ItemID.ANIMAL_COW_BASIC => pool_Animal_Basic_Cow,
                 ItemID.ANIMAL_MOLE => pool_Animal_Basic_Mole,
                 //Default
                 _ => null

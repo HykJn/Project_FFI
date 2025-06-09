@@ -2762,9 +2762,9 @@ MonoBehaviour:
   durabilityObj: {fileID: 0}
   amount: {fileID: 1823187434}
   durability: {fileID: 0}
-  itemID: 0
+  itemID: 20481
   priceText: {fileID: 1421472217}
-  price: 0
+  price: 1000
 --- !u!1 &147074723
 GameObject:
   m_ObjectHideFlags: 0
@@ -33860,9 +33860,9 @@ MonoBehaviour:
   durabilityObj: {fileID: 0}
   amount: {fileID: 884493395}
   durability: {fileID: 0}
-  itemID: 40961
+  itemID: 8196
   priceText: {fileID: 1357140428}
-  price: 100
+  price: 150
 --- !u!1 &739242085
 GameObject:
   m_ObjectHideFlags: 0
@@ -52146,9 +52146,9 @@ MonoBehaviour:
   durabilityObj: {fileID: 0}
   amount: {fileID: 1202250992}
   durability: {fileID: 0}
-  itemID: 0
+  itemID: 8197
   priceText: {fileID: 965399221}
-  price: 0
+  price: 100
 --- !u!1 &1367699653
 GameObject:
   m_ObjectHideFlags: 0
@@ -57290,9 +57290,9 @@ MonoBehaviour:
   durabilityObj: {fileID: 0}
   amount: {fileID: 1109996349}
   durability: {fileID: 0}
-  itemID: 0
+  itemID: 20482
   priceText: {fileID: 669640314}
-  price: 0
+  price: 2500
 --- !u!1001 &1599450026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60570,9 +60570,9 @@ MonoBehaviour:
   durabilityObj: {fileID: 0}
   amount: {fileID: 33178598}
   durability: {fileID: 0}
-  itemID: 20737
+  itemID: 8195
   priceText: {fileID: 1560369467}
-  price: 500
+  price: 80
 --- !u!1 &1735473306
 GameObject:
   m_ObjectHideFlags: 0
@@ -62073,15 +62073,27 @@ MonoBehaviour:
   prefab_Tool_Normal_WateringCan: {fileID: 8258457140436133221, guid: 679999539c90084488ac35a4b079d099, type: 3}
   prefab_Seed_Carrot: {fileID: 3138647776014594108, guid: 5f31b778ccaa9e74185586849c3e7782, type: 3}
   prefab_Seed_EggPlant: {fileID: 6931226740597695900, guid: 62f1646b0014d934fb0b05d16ed78cbb, type: 3}
+  prefab_Seed_Corn: {fileID: 6931226740597695900, guid: 654d5cba49db00342ad20ad35160f71a, type: 3}
+  prefab_Seed_Pumpkin: {fileID: 6931226740597695900, guid: 76b5f2d534096704aad678abe9a9722d, type: 3}
+  prefab_Seed_Tomato: {fileID: 6931226740597695900, guid: 1e5c27e6d5e6a0a40bd822ab5601e0d3, type: 3}
   prefab_Plant_Carrot: {fileID: 3423718292622368407, guid: e4cc49bec1e20bd48a510d33eaf38ab7, type: 3}
   prefab_Plant_EggPlant: {fileID: 1745724441427998536, guid: 329235a7f5fc23944b6b020c20a7fede, type: 3}
+  prefab_Plant_Corn: {fileID: 1745724441427998536, guid: c31af6fbe3961f342a3a625cd62c081d, type: 3}
+  prefab_Plant_Pumpkin: {fileID: 1745724441427998536, guid: e831f343e79c573468fdf88c96bcfc24, type: 3}
+  prefab_Plant_Tomato: {fileID: 1745724441427998536, guid: 9d26d30a22bfcac41812e0bb4c9a8d1a, type: 3}
   prefab_Crop_Carrot: {fileID: 9102802059619478788, guid: a8cb13ba393d8f94996cc3749f88394b, type: 3}
   prefab_Crop_EggPlant: {fileID: 5322291731997335664, guid: efb3fb7738b80d848b6d01a46d370e78, type: 3}
+  prefab_Crop_Corn: {fileID: 5322291731997335664, guid: 45fddff84d73d5043bc420e2cec715ba, type: 3}
+  prefab_Crop_Pumpkin: {fileID: 5322291731997335664, guid: e8de0b45c0fec06408662e7a28cb1452, type: 3}
+  prefab_Crop_Tomato: {fileID: 5322291731997335664, guid: 11f4e913bdd90c54490017c78f8a58a9, type: 3}
+  prefab_Spawn_Egg_Chicken: {fileID: 3807896227092161443, guid: c340cb45bd0929b4d88dfc3f46c73101, type: 3}
+  prefab_Spawn_Egg_Cow: {fileID: 3807896227092161443, guid: afb7adccc9e188c4887c03cf667c93cb, type: 3}
   prefab_Egg_Normal: {fileID: 562066105512981278, guid: c3a484eb29d2dac46ae6017cd9ee7dc9, type: 3}
-  prefab_Egg_Chicken: {fileID: 3807896227092161443, guid: c340cb45bd0929b4d88dfc3f46c73101, type: 3}
+  prefab_Milk_Normal: {fileID: 654241640280497765, guid: cba5f4c6f66f1d849854e2ad4a95296c, type: 3}
   prefab_Store_Item: {fileID: 633410422889106305, guid: baa079a4b04ff234aafff81373ad15dc, type: 3}
   prefab_Store_Obj: {fileID: 7614515580812857402, guid: daf1fd2586a036e45b954bd57c0a3cad, type: 3}
   prefab_Animal_Basic_Chicken: {fileID: 1748861590368672506, guid: 8a0e8a0b142b62e419f970ac7b286873, type: 3}
+  prefab_Animal_Basic_Cow: {fileID: 3879353778476521381, guid: 3eccc5a389cd7f34cba420e79550de50, type: 3}
   prefab_Animal_Basic_Mole: {fileID: 1422386807590309652, guid: 13437b178c5feaa4b848573cd9c0d4a9, type: 3}
   prefab_Land_Light_Grass: {fileID: 7819785200334612239, guid: 0107faf105ed47f4badaff56bac47832, type: 3}
   prefab_Tree_Default: {fileID: 4140450273035469642, guid: e41e0227c750e7b4eabd417b9d4efe72, type: 3}
@@ -68399,9 +68411,9 @@ MonoBehaviour:
   durabilityObj: {fileID: 0}
   amount: {fileID: 372836709}
   durability: {fileID: 0}
-  itemID: 0
+  itemID: 40961
   priceText: {fileID: 2118187219}
-  price: 0
+  price: 50
 --- !u!1 &2059735449
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,4 +18,4 @@ MonoBehaviour:
   itemSprite: {fileID: -1407192652626693244, guid: 1971bb8c07cbc0446998737ab8d44d6c, type: 3}
   healthAmount: 12
   staminaAmount: 15
-  price: 60
+  price: 50

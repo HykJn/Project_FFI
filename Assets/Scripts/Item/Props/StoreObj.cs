@@ -44,8 +44,13 @@ public class StoreObj : PropObj, IIneteractable, IRemovable
             recoverTick = 0;
             return;
         }
+
         GameObject temp = ObjectManager.Instance.GetInstance(ItemID.PROP_STORE_ITEM, true);
         temp.transform.position = this.transform.position;
+
+        Vector2 randPos = TileManager.Instance.GetRandomPos(Vector2Int.RoundToInt(this.transform.position));
+        temp.GetComponent<MonoBehaviour>().StartCoroutine(TileManager.Instance.DropItemSpread(temp, randPos));
+
         Destroy(this.gameObject);
     }
 }

@@ -7,6 +7,7 @@ public class PlantBase : ItemBase
     //public GameObject Crop => prefab_Crop;
     public ItemID CropID => cropID;
     public Sprite[] SpritesEachSteps => spritesEachSteps;
+    public int MaxGrowth => maxGrowth;
     public int MaxDropAmount => maxDropAmount;
     public int MinDropAmount => minDropAmount;
     #endregion
@@ -15,6 +16,7 @@ public class PlantBase : ItemBase
     //[SerializeField] private GameObject prefab_Crop;
     [SerializeField] private ItemID cropID;
     [SerializeField] private Sprite[] spritesEachSteps;
+    [SerializeField] private int maxGrowth;
     [SerializeField] private int maxDropAmount;
     [SerializeField] private int minDropAmount;
     #endregion

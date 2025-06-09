@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155cab55afd922f45aff7696f0cf3c00, type: 3}
+  m_Name: SpawnEgg_Cow
+  m_EditorClassIdentifier: 
+  id: 20482
+  itemName: "\uC18C \uC2A4\uD3F0\uC54C"
+  description: "\uC54C\uC5D0\uC11C \uD0DC\uC5B4\uB09C\uB2E4\uACE0 \uBB50\uB77C\uD558\uC9C0
+    \uB9C8\uC138\uC694..!"
+  itemSprite: {fileID: -9092335394113956585, guid: b96504f3487cd86439e9d1af9d7073d8, type: 3}
+  animalID: 32800

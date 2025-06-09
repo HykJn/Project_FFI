@@ -22,5 +22,6 @@ MonoBehaviour:
   - {fileID: 649138942, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
   - {fileID: 1178455951, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
   - {fileID: -192928032, guid: dba7877c6de467f4cbbeb89d4aa08599, type: 3}
-  maxDropAmount: 5
-  minDropAmount: 2
+  maxGrowth: 3
+  maxDropAmount: 3
+  minDropAmount: 1

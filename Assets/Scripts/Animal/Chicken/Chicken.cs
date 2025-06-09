@@ -28,6 +28,14 @@ public class Chicken : Animal, ISellable
     {
         base.Awake();
         Grown = 0;
+        if (controllers.Length > 0)
+        {
+            anim.runtimeAnimatorController = controllers[0];
+        }
+        else
+        {
+            Debug.LogError("Chicken animator controllers not set.");
+        }
     }
 
     private void OnEnable()

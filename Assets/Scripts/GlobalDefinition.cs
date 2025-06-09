@@ -19,32 +19,49 @@ public enum ItemID
     SEED_NULL = 0x2000,
     SEED_CARROT = 0x2001,
     SEED_EGGPLANT = 0x2002,
+    SEED_TOMATO = 0x2003,
+    SEED_CORN = 0x2004,
+    SEED_PUMPKIN = 0x2005,
 
     //Plant
     PLANT_NULL = 0x3000,
     PLANT_CARROT = 0x3001,
     PLANT_EGGPLANT = 0x3002,
+    PLANT_TOMATO = 0x3003,
+    PLANT_CORN = 0x3004,
+    PLANT_PUMPKIN = 0x3005,
 
     //Crop
     CROP_NULL = 0x4000,
     CROP_CARROT = 0x4001,
     CROP_EGGPLANT = 0x4002,
+    CROP_TOMATO = 0x4003,
+    CROP_CORN = 0x4004,
+    CROP_PUMPKIN = 0x4005,
+
+    //Spawn Egg
+    SPAWN_EGG_NULL = 0x5000,
+    SPAWN_EGG_CHICKEN = 0x5001,
+    SPAWN_EGG_COW = 0x5002,
 
     //Egg
-    EGG_NULL = 0x5000,
-    EGG_NORMAL = 0x5001,
-    EGG_CHICKEN = 0x5101,
+    EGG_NULL = 0x6000,
+    EGG_NORMAL = 0x6001,
+
+    //Milk
+    MILK_NULL = 0x6100,
+    MILK_NORMAL = 0x6101,
 
     //Prop
-    PROP_NULL = 0x6000,
-    PROP_STORE_ITEM = 0x6010,
-    PROP_STORE_OBJ = 0x6011,
+    PROP_NULL = 0x7000,
+    PROP_STORE_ITEM = 0x7010,
+    PROP_STORE_OBJ = 0x7011,
 
     //Animal
-    ANIMAL_NULL = 0x7000,
-    ANIMAL_CHICKEN_BASIC = 0x7010,
-    ANIMAL_COW_BASIC = 0x7020,
-    ANIMAL_MOLE = 0x7030,
+    ANIMAL_NULL = 0x8000,
+    ANIMAL_CHICKEN_BASIC = 0x8010,
+    ANIMAL_COW_BASIC = 0x8020,
+    ANIMAL_MOLE = 0x8030,
 
     //Land
     LAND_NULL = 0xA000,
@@ -139,11 +156,17 @@ public enum ActionID
     Plant = 0x0200,
     PlantCarrot = 0x0201,
     PlantEggplant = 0x0202,
+    PlantTomato = 0x0203,
+    PlantCorn = 0x0204,
+    PlantPumpkin = 0x0205,
 
     //Harvest
     Harvest = 0x0300,
     HarvestCarrot = 0x0301,
     HarvestEggplant = 0x0302,
+    HarvestTomato = 0x0303,
+    HarvestCorn = 0x0304,
+    HarvestPumpkin = 0x0305,
 
     //Animal
     FeedAnimal = 0x0400,
