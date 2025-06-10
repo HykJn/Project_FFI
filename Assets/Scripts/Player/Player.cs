@@ -406,11 +406,22 @@ public class Player : MonoBehaviour
             if (quickslot[i] == item)
             {
                 quickslot[i] = null;
-                UIManager.Instance.UpdateQuickslot();
                 break;
             }
         }
 
+        for (int r = 0; r < 4; r++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                if (inventory[r, j] == item)
+                {
+                    inventory[r, j] = null;
+                    break;
+                }
+            }
+        }
+        UIManager.Instance.UpdateQuickslot();
         ObjectManager.Instance.ReturnHierarchy(item.gameObject);
     }
 
