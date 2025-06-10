@@ -32,6 +32,11 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private GameObject prefab_Crop_Corn;
     [SerializeField] private GameObject prefab_Crop_Pumpkin;
     [SerializeField] private GameObject prefab_Crop_Tomato;
+    //Fruit
+    [SerializeField] private GameObject prefab_Fruit_Apple;
+    [SerializeField] private GameObject prefab_Fruit_Orange;
+    [SerializeField] private GameObject prefab_Fruit_Peach;
+    [SerializeField] private GameObject prefab_Fruit_Pear;
     //Spawn
     [SerializeField] private GameObject prefab_Spawn_Egg_Chicken;
     [SerializeField] private GameObject prefab_Spawn_Egg_Cow;
@@ -50,6 +55,10 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] private GameObject prefab_Land_Light_Grass;
     //Tree
     [SerializeField] private GameObject prefab_Tree_Default;
+    [SerializeField] private GameObject prefab_Tree_Apple;
+    [SerializeField] private GameObject prefab_Tree_Orange;
+    [SerializeField] private GameObject prefab_Tree_Peach;
+    [SerializeField] private GameObject prefab_Tree_Pear;
     //Wood
     [SerializeField] private GameObject prefab_Wood_Log;
     [SerializeField] private GameObject prefab_Wood_Branch;
@@ -79,6 +88,11 @@ public class ObjectManager : MonoBehaviour
     private Transform pool_Crop_Corn;
     private Transform pool_Crop_Pumpkin;
     private Transform pool_Crop_Tomato;
+    //Fruit
+    private Transform pool_Fruit_Apple;
+    private Transform pool_Fruit_Orange;
+    private Transform pool_Fruit_Peach;
+    private Transform pool_Fruit_Pear;
     //Spawn Eggs
     private Transform pool_Spawn_Egg_Chicken;
     private Transform pool_Spawn_Egg_Cow;
@@ -97,6 +111,11 @@ public class ObjectManager : MonoBehaviour
     private Transform pool_Land_Light_Grass;
     //Tree
     private Transform pool_Tree_Default;
+    private Transform pool_Tree_Apple;
+    private Transform pool_Tree_Orange;
+    private Transform pool_Tree_Peach;
+    private Transform pool_Tree_Pear;
+
     //Wood
     private Transform pool_Wood_Log;
     private Transform pool_Wood_Branch;
@@ -127,6 +146,11 @@ public class ObjectManager : MonoBehaviour
     private const ushort cnt_Crop_Corn = 1024;
     private const ushort cnt_Crop_Pumpkin = 1024;
     private const ushort cnt_Crop_Tomato = 1024;
+    //Fruit
+    private const ushort cnt_Fruit_Apple = 1024;
+    private const ushort cnt_Fruit_Orange = 1024;
+    private const ushort cnt_Fruit_Peach = 1024;
+    private const ushort cnt_Fruit_Pear = 1024;
     //Spawn Eggs
     private const ushort cnt_Spawn_Egg_Chicken = 1024;
     private const ushort cnt_Spawn_Egg_Cow = 1024;
@@ -144,7 +168,11 @@ public class ObjectManager : MonoBehaviour
     //Lands
     private const ushort cnt_Land_Light_Grass = 1024;
     //Tree
-    private const ushort cnt_Tree_Default = 512;
+    private const ushort cnt_Tree_Default = 10;
+    private const ushort cnt_Tree_Apple = 10;
+    private const ushort cnt_Tree_Orange = 10;
+    private const ushort cnt_Tree_Peach = 10;
+    private const ushort cnt_Tree_Pear = 10;
     //Wood
     private const ushort cnt_Wood_Log = 1024;
     private const ushort cnt_Wood_Branch = 1024;
@@ -164,10 +192,10 @@ public class ObjectManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
+        //}
 
-    private void Start()
-    {
+        //private void Start()
+        //{
         activated = new GameObject("Activated").transform;
         DontDestroyOnLoad(activated.gameObject);
         //Initialize pools
@@ -406,6 +434,57 @@ public class ObjectManager : MonoBehaviour
                 }
                 DontDestroyOnLoad(p_Crop.gameObject);
             }
+            //Fruit
+            Transform t_Fruit = new GameObject("Fruit").transform;
+            {
+                //Apple
+                pool_Fruit_Apple = new GameObject("Apple").transform;
+                pool_Fruit_Apple.SetParent(t_Fruit);
+                {
+                    parent = pool_Fruit_Apple;
+                    for (int i = 0; i < cnt_Fruit_Apple; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Fruit_Apple, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Orange
+                pool_Fruit_Orange = new GameObject("Orange").transform;
+                pool_Fruit_Orange.SetParent(t_Fruit);
+                {
+                    parent = pool_Fruit_Orange;
+                    for (int i = 0; i < cnt_Fruit_Orange; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Fruit_Orange, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Peach
+                pool_Fruit_Peach = new GameObject("Peach").transform;
+                pool_Fruit_Peach.SetParent(t_Fruit);
+                {
+                    parent = pool_Fruit_Peach;
+                    for (int i = 0; i < cnt_Fruit_Peach; i++)
+                    {
+                        {
+                            GameObject obj = Instantiate(prefab_Fruit_Peach, parent);
+                            obj.SetActive(false);
+                        }
+                    }
+                }
+                //Pear
+                pool_Fruit_Pear = new GameObject("Pear").transform;
+                pool_Fruit_Pear.SetParent(t_Fruit);
+                {
+                    parent = pool_Fruit_Pear;
+                    for (int i = 0; i < cnt_Fruit_Pear; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Fruit_Pear, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                DontDestroyOnLoad(t_Fruit.gameObject);
+            }
             //Spawn Eggs
             Transform t_Spawn_Egg = new GameObject("Spawn_Egg").transform;
             {
@@ -535,7 +614,7 @@ public class ObjectManager : MonoBehaviour
                     pool_Animal_Basic_Mole.SetParent(p_Mole);
                     {
                         parent = pool_Animal_Basic_Mole;
-                        for(int i = 0; i < cnt_Animal_Basic_Mole; i++)
+                        for (int i = 0; i < cnt_Animal_Basic_Mole; i++)
                         {
                             GameObject obj = Instantiate(prefab_Animal_Basic_Mole, parent);
                             obj.SetActive(false);
@@ -571,6 +650,50 @@ public class ObjectManager : MonoBehaviour
                     for (int i = 0; i < cnt_Tree_Default; i++)
                     {
                         GameObject obj = Instantiate(prefab_Tree_Default, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tree Apple
+                pool_Tree_Apple = new GameObject("Apple").transform;
+                pool_Tree_Apple.SetParent(p_Tree);
+                {
+                    parent = pool_Tree_Apple;
+                    for (int i = 0; i < cnt_Tree_Apple; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Tree_Apple, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tree Orange
+                pool_Tree_Orange = new GameObject("Orange").transform;
+                pool_Tree_Orange.SetParent(p_Tree);
+                {
+                    parent = pool_Tree_Orange;
+                    for (int i = 0; i < cnt_Tree_Orange; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Tree_Orange, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tree Peach
+                pool_Tree_Peach = new GameObject("Peach").transform;
+                pool_Tree_Peach.SetParent(p_Tree);
+                {
+                    parent = pool_Tree_Peach;
+                    for (int i = 0; i < cnt_Tree_Peach; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Tree_Peach, parent);
+                        obj.SetActive(false);
+                    }
+                }
+                //Tree Pear
+                pool_Tree_Pear = new GameObject("Pear").transform;
+                pool_Tree_Pear.SetParent(p_Tree);
+                {
+                    parent = pool_Tree_Pear;
+                    for (int i = 0; i < cnt_Tree_Pear; i++)
+                    {
+                        GameObject obj = Instantiate(prefab_Tree_Pear, parent);
                         obj.SetActive(false);
                     }
                 }
@@ -665,6 +788,12 @@ public class ObjectManager : MonoBehaviour
             ItemID.CROP_PUMPKIN => pool_Crop_Pumpkin,
             ItemID.CROP_TOMATO => pool_Crop_Tomato,
 
+            //Fruits
+            ItemID.FRUIT_APPLE => pool_Fruit_Apple,
+            ItemID.FRUIT_ORANGE => pool_Fruit_Orange,
+            ItemID.FRUIT_PEACH => pool_Fruit_Peach,
+            ItemID.FRUIT_PEAR => pool_Fruit_Pear,
+
             //Spawn Eggs
             ItemID.SPAWN_EGG_CHICKEN => pool_Spawn_Egg_Chicken,
             ItemID.SPAWN_EGG_COW => pool_Spawn_Egg_Cow,
@@ -689,6 +818,10 @@ public class ObjectManager : MonoBehaviour
 
             //Tree
             ItemID.TREE_DEFAULT => pool_Tree_Default,
+            ItemID.TREE_APPLE => pool_Tree_Apple,
+            ItemID.TREE_ORANGE => pool_Tree_Orange,
+            ItemID.TREE_PEACH => pool_Tree_Peach,
+            ItemID.TREE_PEAR => pool_Tree_Pear,
 
             //Wood
             ItemID.WOOD_LOG => pool_Wood_Log,
@@ -742,6 +875,12 @@ public class ObjectManager : MonoBehaviour
             ItemID.PLANT_PUMPKIN => prefab_Plant_Pumpkin,
             ItemID.PLANT_TOMATO => prefab_Plant_Tomato,
 
+            //Fruits
+            ItemID.FRUIT_APPLE => prefab_Fruit_Apple,
+            ItemID.FRUIT_ORANGE => prefab_Fruit_Orange,
+            ItemID.FRUIT_PEACH => prefab_Fruit_Peach,
+            ItemID.FRUIT_PEAR => prefab_Fruit_Pear,
+
             //Crops
             ItemID.CROP_CARROT => prefab_Crop_Carrot,
             ItemID.CROP_EGGPLANT => prefab_Crop_EggPlant,
@@ -767,12 +906,16 @@ public class ObjectManager : MonoBehaviour
             ItemID.ANIMAL_CHICKEN_BASIC => prefab_Animal_Basic_Chicken,
             ItemID.ANIMAL_COW_BASIC => prefab_Animal_Basic_Cow,
             ItemID.ANIMAL_MOLE => prefab_Animal_Basic_Mole,
-            
+
             //Lands
             ItemID.LAND_LIGHT_GRASS => prefab_Land_Light_Grass,
 
             //Tree
             ItemID.TREE_DEFAULT => prefab_Tree_Default,
+            ItemID.TREE_APPLE => prefab_Tree_Apple,
+            ItemID.TREE_ORANGE => prefab_Tree_Orange,
+            ItemID.TREE_PEACH => prefab_Tree_Peach,
+            ItemID.TREE_PEAR => prefab_Tree_Pear,
 
             //Wood
             ItemID.WOOD_LOG => prefab_Wood_Log,
@@ -821,6 +964,12 @@ public class ObjectManager : MonoBehaviour
                 ItemID.CROP_CORN => pool_Crop_Corn,
                 ItemID.CROP_PUMPKIN => pool_Crop_Pumpkin,
                 ItemID.CROP_TOMATO => pool_Crop_Tomato,
+                
+                //Fruit
+                ItemID.FRUIT_APPLE => pool_Fruit_Apple,
+                ItemID.FRUIT_ORANGE => pool_Fruit_Orange,
+                ItemID.FRUIT_PEACH => pool_Fruit_Peach,
+                ItemID.FRUIT_PEAR => pool_Fruit_Pear,
 
                 //Spawn Egg
                 ItemID.SPAWN_EGG_CHICKEN => pool_Spawn_Egg_Chicken,
@@ -841,6 +990,10 @@ public class ObjectManager : MonoBehaviour
 
                 //Tree
                 ItemID.TREE_DEFAULT => pool_Tree_Default,
+                ItemID.TREE_APPLE => pool_Tree_Apple,
+                ItemID.TREE_ORANGE => pool_Tree_Orange,
+                ItemID.TREE_PEACH => pool_Tree_Peach,
+                ItemID.TREE_PEAR => pool_Tree_Pear,
 
                 //Wood
                 ItemID.WOOD_LOG => pool_Wood_Log,

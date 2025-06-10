@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155cab55afd922f45aff7696f0cf3c00, type: 3}
   m_Name: SpawnEgg_Chicken
   m_EditorClassIdentifier: 
-  id: 20481
+  id: 24577
   itemName: "\uC720\uC815\uB780"
   description: "\uADC0\uC5EC\uC6B4 \uBCD1\uC544\uB9AC \uCE5C\uAD6C\uB97C \uD0A4\uC6CC\uBCF4\uC544\uC694!"
   itemSprite: {fileID: 3615798674218886836, guid: b96504f3487cd86439e9d1af9d7073d8, type: 3}
-  animalID: 32784
+  animalID: 36880

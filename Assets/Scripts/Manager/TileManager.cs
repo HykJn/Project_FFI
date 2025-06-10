@@ -33,6 +33,14 @@ public class TileManager : MonoBehaviour
     public Tilemap[] Layer_Props => layer_Props;
 
     public bool MoleSpawned { get; set; }
+    public int TreeCount { get; set; } = 0;
+    private int MaxTreeCount
+    {
+        get
+        {
+            return (layer_Lands.size.x * layer_Lands.size.y) / 20;
+        }
+    }
     #endregion
 
     #region PrivateFields
@@ -60,7 +68,8 @@ public class TileManager : MonoBehaviour
     private Dictionary<Vector2Int, TileData> tileData = new();
 
     //Misc
-    [SerializeField] private float moleSpawnTick = 0f;
+    private float moleSpawnTick = 0f;
+    private int spawnTreeDays = 0;
     #endregion
 
     #region Unity
@@ -80,11 +89,15 @@ public class TileManager : MonoBehaviour
     private void Start()
     {
         Init();
+
         for (int i = 0; i < layer_Props.Length; i++)
         {
             InitPropLayer(i);
         }
-        //GameManager.Instance.OnEndDay += Init;
+
+        spawnTreeDays = 1;
+        TreeSpawner();
+        GameManager.Instance.OnEndDay += TreeSpawner;
     }
 
     private void Update()
@@ -96,7 +109,6 @@ public class TileManager : MonoBehaviour
     #region Methods
     public void Init()
     {
-        //UpdatePlantLayer();
         UpdateFarmLandLayer();
         UpdateLandLayer();
     }
@@ -196,6 +208,7 @@ public class TileManager : MonoBehaviour
                 Transform prop = layer_Props[layer].transform.GetChild(i);
                 rule_GameObject.m_DefaultGameObject = prop.gameObject;
                 layer_Props[layer].SetTile(Vector3Int.RoundToInt(prop.position), rule_GameObject);
+                rule_GameObject.m_DefaultGameObject = null;
                 Destroy(prop.gameObject);
             }
         }
@@ -388,9 +401,15 @@ public class TileManager : MonoBehaviour
             return false;
         }
 
+        propObj.SetActive(true);
         rule_GameObject.m_DefaultGameObject = propObj;
         layer_Props[layer].SetTile((Vector3Int)pos, rule_GameObject);
         rule_GameObject.m_DefaultGameObject = null;
+
+        if (layer_Props[layer].GetInstantiatedObject((Vector3Int)pos).TryGetComponent<Item>(out Item item))
+        {
+            item.Init();
+        }
 
         tileData[pos] = new(false, false, false, false);
 
@@ -407,6 +426,14 @@ public class TileManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void RemoveProp(Vector2Int pos, int layer)
+    {
+        if (!tileData.ContainsKey(pos) || !layer_Props[layer].HasTile((Vector3Int)pos)) return;
+
+        layer_Props[layer].SetTile((Vector3Int)pos, null);
+        tileData[pos] = new(true, false, false, false);
     }
 
     public bool TryGetPropObj(Vector2Int pos, int layer, out PropObj prop)
@@ -551,7 +578,7 @@ public class TileManager : MonoBehaviour
                     Vector2Int randPos = new Vector2Int(UnityEngine.Random.Range(min.x, max.x),
                         UnityEngine.Random.Range(min.y, max.y)
                     );
-                    //TODO: Modify chiken to mole
+
                     if (SpawnAnimal(randPos, ObjectManager.Instance.GetInstance(ItemID.ANIMAL_MOLE, true)))
                     {
                         MoleSpawned = true;
@@ -560,6 +587,50 @@ public class TileManager : MonoBehaviour
                 }
                 MoleSpawner();
             }
+        }
+    }
+
+    public void TreeSpawner()
+    {
+        if (TreeCount >= MaxTreeCount)
+        {
+            spawnTreeDays = 0;
+            return;
+        }
+
+        if (spawnTreeDays == 1)
+        {
+            spawnTreeDays = 0;
+
+            while (TreeCount < MaxTreeCount)
+            {
+                Vector2Int min = (Vector2Int)layer_Lands.cellBounds.min + Vector2Int.one;
+                Vector2Int max = (Vector2Int)layer_Lands.cellBounds.max - Vector2Int.one;
+                Vector2Int randPos = new Vector2Int(UnityEngine.Random.Range(min.x, max.x),
+                        UnityEngine.Random.Range(min.y, max.y)
+                    );
+
+                if (HasLand(randPos))
+                {
+                    bool hasFarmLand = layer_FarmLands.HasTile((Vector3Int)randPos);
+                    bool hasProp = TryGetPropObj(randPos, out PropObj temp);
+                    if (!hasFarmLand && !hasProp)
+                    {
+                        int randNum = UnityEngine.Random.Range(0, 10);
+                        ItemID treeID = ItemID.TREE_DEFAULT;
+                        if(randNum >= 1 && randNum <= 4)
+                        {
+                            treeID += randNum;
+                        }
+                        PlaceProp(randPos, ObjectManager.Instance.GetPrefab(treeID), 0);
+                        TreeCount++;
+                    }
+                }
+            }
+        }
+        else
+        {
+            spawnTreeDays++;
         }
     }
     #endregion

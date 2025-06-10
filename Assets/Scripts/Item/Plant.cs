@@ -56,7 +56,7 @@ public class Plant : Item
     {
         if (TileManager.Instance.Growable(Vector2Int.RoundToInt(this.transform.position)))
         {
-            Growth = Mathf.Clamp(Growth + 1, 0, 3);
+            Growth = Mathf.Clamp(Growth + 1, 0, MaxGrowth);
             this.GetComponent<SpriteRenderer>().sprite = SpritesEachSteps[Growth];
         }
         else Wither();

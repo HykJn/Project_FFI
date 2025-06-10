@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25de5c203a1e244a9fd828c2e5ed1e9, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e5d322dd68551468e90f0538848072, type: 3}
   m_Name: Tree_Default
   m_EditorClassIdentifier: 
   id: 45057
   itemName: "\uCC38\uB098\uBB34"
   description: "\uBAA9\uC7AC\uB97C \uC5BB\uC744 \uC218 \uC788\uC5B4\uC694!"
   itemSprite: {fileID: 8743770235792392289, guid: fc735671b8592944499ca7e31ad2bd87, type: 3}
+  dropItemID: 02c0000001c00000

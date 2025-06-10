@@ -51,6 +51,8 @@ public class StoreObj : PropObj, IIneteractable, IRemovable
         Vector2 randPos = TileManager.Instance.GetRandomPos(Vector2Int.RoundToInt(this.transform.position));
         temp.GetComponent<MonoBehaviour>().StartCoroutine(TileManager.Instance.DropItemSpread(temp, randPos));
 
+        TileManager.Instance.RemoveProp(Vector2Int.RoundToInt(this.transform.position), 0);
+
         Destroy(this.gameObject);
     }
 }

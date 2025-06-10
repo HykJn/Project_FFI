@@ -72,9 +72,9 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -85,9 +85,9 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638851522630498776
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -462,157 +462,769 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2037742667
-    name: tree animations
-    layerFlags: 0
+    guid: -784143551
+    name: trees
+    layerFlags: 19
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: trees
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 11
+        y: -44
+        width: 553
+        height: 223
+      spriteId: e8b0a255e24720f4aa022ca9e3fb384f
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    parentIndex: -1
+  - layerIndex: 1
+    guid: 1234725677
+    name: Peaches
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Peaches
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 2
         y: -47
-        width: 610
-        height: 226
-      spriteId: 57d4f23fe8a393a408567bb803ef65b3
-    - name: Frame_1
+        width: 570
+        height: 222
+      spriteId: 546b21891afcb96459cc4c6d21e3dc6a
+    linkedCells:
+    - frameIndex: 1
+      linkedToFrame: 0
+    - frameIndex: 2
+      linkedToFrame: 0
+    - frameIndex: 3
+      linkedToFrame: 0
+    - frameIndex: 4
+      linkedToFrame: 0
+    - frameIndex: 5
+      linkedToFrame: 0
+    - frameIndex: 6
+      linkedToFrame: 0
+    - frameIndex: 7
+      linkedToFrame: 0
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 0
+    - frameIndex: 10
+      linkedToFrame: 0
+    - frameIndex: 11
+      linkedToFrame: 0
+    - frameIndex: 12
+      linkedToFrame: 0
+    - frameIndex: 13
+      linkedToFrame: 0
+    - frameIndex: 14
+      linkedToFrame: 0
+    - frameIndex: 15
+      linkedToFrame: 0
+    parentIndex: -1
+  - layerIndex: 5
+    guid: -7500612
+    name: Layer 5
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 5_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: f0d3e8f36efe8ad49af81757b00bc3b4
+    - name: Layer 5_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 611
-        height: 226
-      spriteId: 3fef10655c8d1cf4e81a03de2bc0f40f
-    - name: Frame_2
+        x: 587
+        y: 100
+        width: 26
+        height: 29
+      spriteId: c8a31c387eb4cd74dbd126016f4bf059
+    - name: Layer 5_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 616
-        height: 226
-      spriteId: 8bdd49f3ca9c80e4f9c639740e85e1be
-    - name: Frame_3
+        x: 588
+        y: 100
+        width: 24
+        height: 33
+      spriteId: 3f0c44984bc227e4398adc42251195ce
+    - name: Layer 5_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 53a9bf895d22e7748a0bbb5971894131
-    - name: Frame_4
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: 86b61f938df19b0438d5fb253ef32bd1
+    - name: Layer 5_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 619
-        height: 226
-      spriteId: b14ce04dc2c3b4a40a64dfcb9265a0ff
-    - name: Frame_5
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: 48d0faf2ba4a0ff4987d09a71d2fdc43
+    - name: Layer 5_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 3e91adc285f52604a8ce7dbef097cd97
-    - name: Frame_6
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: 37b89c0829d308945ad0bc7984766ece
+    - name: Layer 5_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: f95ba44d48893994da93f840c3bf79c4
-    - name: Frame_7
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: fd0112daa8512ab48b6152daadcb0a91
+    - name: Layer 5_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 33bc81fe960ec5045876e72cd90bf8c2
-    - name: Frame_8
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: 32c0a5505a35dc843a9a9bdcc0b18ee0
+    - name: Layer 5_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: d00f9d830ea125a4dbac6e4daf4676e1
-    - name: Frame_9
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: 6b45a37976baeb44687619cc01ca95fa
+    - name: Layer 5_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 0a01d1723e2883a4d96a84e921469249
-    - name: Frame_10
+        x: 587
+        y: 100
+        width: 26
+        height: 29
+      spriteId: 4263a50a6dc811b4586fde4cc03f7577
+    - name: Layer 5_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 9414c7cbefa792647a40ef842aa6f841
-    - name: Frame_11
+        x: 588
+        y: 100
+        width: 24
+        height: 33
+      spriteId: fab7aba7ec44ad34781eb896aa66721a
+    - name: Layer 5_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 9a65ad39275c6d44da82292f16187545
-    - name: Frame_12
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: 7ca16130ddc4ecf49982864ae18ed895
+    - name: Layer 5_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: e6380858aa94f5b4495dc1f40dcb2c2b
-    - name: Frame_13
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: c695c9c5ba97adc4c85cb3fe06940eb7
+    - name: Layer 5_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: f777057b4565a3d41a13fbfce1947522
-    - name: Frame_14
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: dba32e089836bde4f942a20c40f92ce3
+    - name: Layer 5_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: 8fbe1649f376bef418cae07c76a449a8
-    - name: Frame_15
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: bbd863b6f1a47ca4e8842973be2c40f8
+    - name: Layer 5_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
-        x: 2
-        y: -47
-        width: 618
-        height: 226
-      spriteId: d25c2f895a89f4645ac9bce907d9a12f
+        x: 588
+        y: 100
+        width: 24
+        height: 31
+      spriteId: b29a6f603a51f9b4c84b58a177fb74d6
     linkedCells: []
+    parentIndex: -1
+  - layerIndex: 6
+    guid: -7500615
+    name: Layer 6
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 6_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 594
+        y: 113
+        width: 13
+        height: 12
+      spriteId: 90319f607d7465e41aa3dd67ac7e53d1
+    - name: Layer 6_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 591
+        y: 112
+        width: 19
+        height: 17
+      spriteId: 29cdfacda3e93c54395d3fb7beed0f27
+    - name: Layer 6_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 111
+        width: 17
+        height: 15
+      spriteId: 7e2738fde3c7e4e419ac3f243cdb650e
+    - name: Layer 6_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 112
+        width: 17
+        height: 15
+      spriteId: e57ec51b15ffda742b5e75a48fba6cf5
+    - name: Layer 6_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 594
+        y: 113
+        width: 13
+        height: 12
+      spriteId: e2db55fee41d1714aaf937115a31ba7b
+    - name: Layer 6_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 591
+        y: 112
+        width: 19
+        height: 17
+      spriteId: 293eda988ad729f439d432a75b0b638d
+    - name: Layer 6_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 111
+        width: 17
+        height: 15
+      spriteId: aa4de5d1351da2842a126b64868a1fb4
+    - name: Layer 6_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 112
+        width: 17
+        height: 15
+      spriteId: 964794a3870273249a73886dc743b55a
+    linkedCells:
+    - frameIndex: 5
+      linkedToFrame: 4
+    - frameIndex: 6
+      linkedToFrame: 4
+    - frameIndex: 7
+      linkedToFrame: 4
+    - frameIndex: 13
+      linkedToFrame: 12
+    - frameIndex: 14
+      linkedToFrame: 12
+    - frameIndex: 15
+      linkedToFrame: 12
+    parentIndex: -1
+  - layerIndex: 7
+    guid: -7500608
+    name: Layer 9
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 9_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 24
+        height: 31
+      spriteId: 2b9ed57d883a4a248a8511c312178424
+    - name: Layer 9_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 25
+        height: 31
+      spriteId: e92ed4acd0b090048879a6f0f4a1c84a
+    - name: Layer 9_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 25
+        height: 31
+      spriteId: fffc02c32ec2d86429796fbfd46e9039
+    - name: Layer 9_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 587
+        y: 4
+        width: 25
+        height: 31
+      spriteId: 2d9211546575ab84b87efcfd555c704c
+    - name: Layer 9_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 587
+        y: 4
+        width: 24
+        height: 31
+      spriteId: 22e0b8736c229ce439abffd584044531
+    - name: Layer 9_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 24
+        height: 31
+      spriteId: 63255711a2afd44408e0ab5b461b3355
+    - name: Layer 9_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 24
+        height: 31
+      spriteId: 032e6ee07ba76ea4c9bc4f3e7958c583
+    - name: Layer 9_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 25
+        height: 31
+      spriteId: e49fe9929f0d3744d9ce8a35d807fca9
+    - name: Layer 9_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 25
+        height: 31
+      spriteId: 2d6cd5d852fbf6b4fae2b9fea42b8c4b
+    - name: Layer 9_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 587
+        y: 4
+        width: 25
+        height: 31
+      spriteId: da3d6dd9029e4b340a242b7dcf944739
+    - name: Layer 9_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 587
+        y: 4
+        width: 24
+        height: 31
+      spriteId: 4d05cc29d52955b4e9ea2ab9c0b5c27f
+    - name: Layer 9_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 4
+        width: 24
+        height: 31
+      spriteId: 7d19e979700db454594ed9a74168f77e
+    linkedCells:
+    - frameIndex: 12
+      linkedToFrame: 11
+    - frameIndex: 13
+      linkedToFrame: 11
+    - frameIndex: 14
+      linkedToFrame: 11
+    - frameIndex: 15
+      linkedToFrame: 11
+    parentIndex: -1
+  - layerIndex: 8
+    guid: -514254776
+    name: Layer 10
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 10_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 593
+        y: 16
+        width: 16
+        height: 15
+      spriteId: 447ab8a361a00eb43a54b21c0bd964c0
+    - name: Layer 10_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 593
+        y: 16
+        width: 19
+        height: 15
+      spriteId: f6b16bca6cd4a474c8e69211476e17a0
+    - name: Layer 10_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 591
+        y: 16
+        width: 27
+        height: 15
+      spriteId: 93523e24ab3378543a00eac2a17f8c88
+    - name: Layer 10_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 589
+        y: 14
+        width: 31
+        height: 17
+      spriteId: 5b0b07445a4b74d41a01d515fd095603
+    - name: Layer 10_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 585
+        y: 5
+        width: 36
+        height: 27
+      spriteId: 85f13f944399cee4199bbf44396ced3e
+    - name: Layer 10_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 581
+        y: 7
+        width: 39
+        height: 28
+      spriteId: 8c04cb08d71034d40a9b5947e4e1d231
+    - name: Layer 10_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 578
+        y: 1
+        width: 42
+        height: 25
+      spriteId: 5f5f87fb5a5e0b342af5dc5ee6f133f8
+    - name: Layer 10_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 577
+        y: 3
+        width: 43
+        height: 12
+      spriteId: 18ce89a7ae2188b459adba3e6b2c2aa1
+    - name: Layer 10_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 578
+        y: 2
+        width: 42
+        height: 16
+      spriteId: d87cacc158f1bfe47bd95e49feee30b8
+    - name: Layer 10_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 578
+        y: 2
+        width: 42
+        height: 15
+      spriteId: a25d56ce590fc9248a8f943318ecc7eb
+    - name: Layer 10_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 578
+        y: 2
+        width: 42
+        height: 15
+      spriteId: 68c0f5ba806733f4b8b508382461695f
+    linkedCells:
+    - frameIndex: 11
+      linkedToFrame: 10
+    - frameIndex: 12
+      linkedToFrame: 10
+    - frameIndex: 13
+      linkedToFrame: 10
+    - frameIndex: 14
+      linkedToFrame: 10
+    - frameIndex: 15
+      linkedToFrame: 10
+    parentIndex: -1
+  - layerIndex: 9
+    guid: -7500614
+    name: Layer 7
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 7_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 52
+        width: 24
+        height: 31
+      spriteId: 236a9c6b4b1122d4dbd18adfb5faa325
+    - name: Layer 7_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 52
+        width: 24
+        height: 31
+      spriteId: 63eba03064524ed47b6c8b920b9339e8
+    - name: Layer 7_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 52
+        width: 25
+        height: 31
+      spriteId: 0b6bdc99b686c074a831ff46179dced9
+    - name: Layer 7_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 52
+        width: 25
+        height: 31
+      spriteId: f8eb2923cd624b545a0e96076df199a1
+    - name: Layer 7_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 587
+        y: 52
+        width: 25
+        height: 31
+      spriteId: bf8bf3e1354b7864a9625e750376de27
+    - name: Layer 7_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 587
+        y: 52
+        width: 24
+        height: 31
+      spriteId: b1d5274311520ca4f8730c3e67a29f4f
+    - name: Layer 7_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 588
+        y: 52
+        width: 24
+        height: 31
+      spriteId: 47c0ecc481bb54543a023ab8aae66838
+    linkedCells:
+    - frameIndex: 7
+      linkedToFrame: 6
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 1
+    - frameIndex: 10
+      linkedToFrame: 2
+    - frameIndex: 11
+      linkedToFrame: 3
+    - frameIndex: 12
+      linkedToFrame: 4
+    - frameIndex: 13
+      linkedToFrame: 5
+    - frameIndex: 14
+      linkedToFrame: 6
+    - frameIndex: 15
+      linkedToFrame: 6
+    parentIndex: -1
+  - layerIndex: 10
+    guid: -7500609
+    name: Layer 8
+    layerFlags: 19
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 8_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 64
+        width: 17
+        height: 15
+      spriteId: 5b542c3f3487be246a28bf0aa926d30e
+    - name: Layer 8_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 64
+        width: 17
+        height: 15
+      spriteId: 484df415723b99c42ab98f8a00793f2d
+    - name: Layer 8_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 593
+        y: 64
+        width: 17
+        height: 15
+      spriteId: 6f139e6cb32614b4b819d192d2e0623b
+    - name: Layer 8_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 593
+        y: 64
+        width: 17
+        height: 15
+      spriteId: 7e62b38b8b19fd141bc144656190a9ee
+    - name: Layer 8_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 591
+        y: 64
+        width: 18
+        height: 15
+      spriteId: b52cf83790227d64e937bc3b20b04d45
+    - name: Layer 8_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 591
+        y: 64
+        width: 17
+        height: 15
+      spriteId: 4c5b58d9ce2a3a942b4692dad19af467
+    - name: Layer 8_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 592
+        y: 64
+        width: 17
+        height: 15
+      spriteId: b66bf257c4b055c4d857b8c579e3e436
+    linkedCells:
+    - frameIndex: 7
+      linkedToFrame: 6
+    - frameIndex: 8
+      linkedToFrame: 0
+    - frameIndex: 9
+      linkedToFrame: 1
+    - frameIndex: 10
+      linkedToFrame: 2
+    - frameIndex: 11
+      linkedToFrame: 3
+    - frameIndex: 12
+      linkedToFrame: 4
+    - frameIndex: 13
+      linkedToFrame: 5
+    - frameIndex: 14
+      linkedToFrame: 6
+    - frameIndex: 15
+      linkedToFrame: 6
     parentIndex: -1
   platformSettings:
   - name: Default
@@ -627,8 +1239,32 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 624, y: 192}
-  previousTextureSize: {x: 2048, y: 2048}
+  previousTextureSize: {x: 1024, y: 512}

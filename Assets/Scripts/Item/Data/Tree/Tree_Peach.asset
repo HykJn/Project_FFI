@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e5d322dd68551468e90f0538848072, type: 3}
+  m_Name: Tree_Peach
+  m_EditorClassIdentifier: 
+  id: 45060
+  itemName: "\uBCF5\uC22D\uC544 \uB098\uBB34"
+  description: "\uC808\uCE5C\uD55C \uC0AC\uB78C\uB4E4\uACFC \uC220\uC794\uC744 \uAE30\uC6B8\uC5EC\uBCF4\uC138\uC694!"
+  itemSprite: {fileID: 2082452873430758970, guid: 82049f6ed2c970a419a330967c272a8d, type: 3}
+  dropItemID: 02c0000001c0000003500000

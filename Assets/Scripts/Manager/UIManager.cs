@@ -170,8 +170,8 @@ public class UIManager : MonoBehaviour
         farmingResult.text = $"Farming: {GameManager.Instance.FarmingResult}";
         animalResult.text = $"Animal: {GameManager.Instance.AnimalResult}";
         expenseResult.text = $"Expense: {GameManager.Instance.ExpenseResult}";
-        string oper = GameManager.Instance.TotalResult >= 0 ? "+" : string.Empty;
-        totalResult.text = $"Total: {playerScript.Golds} + {GameManager.Instance.TotalResult} = {playerScript.Golds + GameManager.Instance.TotalResult}";
+        bool isPosi = GameManager.Instance.TotalResult >= 0;
+        totalResult.text = $"Total: {playerScript.Golds} {(isPosi ? "+" : "-")} {(isPosi ? GameManager.Instance.TotalResult : -GameManager.Instance.TotalResult)} = {playerScript.Golds + GameManager.Instance.TotalResult}";
     }
 
     public void ExitGame()

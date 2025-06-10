@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 536999463
   m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 8743770235792392289, guid: fc735671b8592944499ca7e31ad2bd87, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -9111269859762049092, guid: b887639e9f6a602408fe74780078fed3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f8cee9474feac4faaeb7a8df9fd938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseData: {fileID: 11400000, guid: 45701c01c0939d043812f59b112e101a, type: 2}
+  baseData: {fileID: 11400000, guid: d444272ac04fbe545a7136c59cd64551, type: 2}
 --- !u!95 &1670581334102754201
 Animator:
   serializedVersion: 7
@@ -145,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 4140450273035469642}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb45b707e78547242a7564fe4523055b, type: 2}
+  m_Controller: {fileID: 9100000, guid: ee67882a02efe1148b438331549631e4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -191,6 +191,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.75, y: 0.25}
   m_Direction: 1

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e5d322dd68551468e90f0538848072, type: 3}
+  m_Name: Tree_Apple
+  m_EditorClassIdentifier: 
+  id: 45058
+  itemName: "\uC0AC\uACFC \uB098\uBB34"
+  description: "\uC0C8\uCF64\uB2EC\uCF64 \uC0AC\uACFC\uB098\uBB34!"
+  itemSprite: {fileID: 1520821671283474480, guid: f981c34ef8d5d834eac5ed27f0eb1785, type: 3}
+  dropItemID: 02c0000001c0000001500000

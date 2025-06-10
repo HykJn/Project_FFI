@@ -213,6 +213,9 @@ public class Player : MonoBehaviour
         //Move by transform
         this.transform.position += Time.deltaTime * speed * (sprint ? 1.5f : 1f) * (Vector3)dir.normalized;
 
+        Vector3 origin = this.transform.position;
+        this.transform.position = new Vector3(origin.x, origin.y, origin.y / 100f);
+
         //Set Animator
         anim.SetBool("IsMove", true);
         anim.SetFloat("IsRun", sprint ? 1 : 0);

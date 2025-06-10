@@ -39,29 +39,36 @@ public enum ItemID
     CROP_CORN = 0x4004,
     CROP_PUMPKIN = 0x4005,
 
+    //Fruits
+    FRUIT_NULL = 0x5000,
+    FRUIT_APPLE = 0x5001,
+    FRUIT_ORANGE = 0x5002,
+    FRUIT_PEACH = 0x5003,
+    FRUIT_PEAR = 0x5004,
+
     //Spawn Egg
-    SPAWN_EGG_NULL = 0x5000,
-    SPAWN_EGG_CHICKEN = 0x5001,
-    SPAWN_EGG_COW = 0x5002,
+    SPAWN_EGG_NULL = 0x6000,
+    SPAWN_EGG_CHICKEN = 0x6001,
+    SPAWN_EGG_COW = 0x6002,
 
     //Egg
-    EGG_NULL = 0x6000,
-    EGG_NORMAL = 0x6001,
+    EGG_NULL = 0x7000,
+    EGG_NORMAL = 0x7001,
 
     //Milk
-    MILK_NULL = 0x6100,
-    MILK_NORMAL = 0x6101,
+    MILK_NULL = 0x7100,
+    MILK_NORMAL = 0x7101,
 
     //Prop
-    PROP_NULL = 0x7000,
-    PROP_STORE_ITEM = 0x7010,
-    PROP_STORE_OBJ = 0x7011,
+    PROP_NULL = 0x8000,
+    PROP_STORE_ITEM = 0x8010,
+    PROP_STORE_OBJ = 0x8011,
 
     //Animal
-    ANIMAL_NULL = 0x8000,
-    ANIMAL_CHICKEN_BASIC = 0x8010,
-    ANIMAL_COW_BASIC = 0x8020,
-    ANIMAL_MOLE = 0x8030,
+    ANIMAL_NULL = 0x9000,
+    ANIMAL_CHICKEN_BASIC = 0x9010,
+    ANIMAL_COW_BASIC = 0x9020,
+    ANIMAL_MOLE = 0x9030,
 
     //Land
     LAND_NULL = 0xA000,
@@ -70,6 +77,10 @@ public enum ItemID
     //Tree
     TREE_NULL = 0xB000,
     TREE_DEFAULT = 0xB001,
+    TREE_APPLE = 0xB002,
+    TREE_ORANGE = 0xB003,
+    TREE_PEACH = 0xB004,
+    TREE_PEAR = 0xB005,
 
     //Wood
     WOOD_NULL = 0xC000,

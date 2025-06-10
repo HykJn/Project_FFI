@@ -27,6 +27,7 @@ public class InventoryUI : MonoBehaviour, IPanel, IHover
     [SerializeField] private GraphicRaycaster raycaster;
     private PointerEventData eventData;
     [SerializeField] private GameObject clone;
+    [SerializeField] private Scrollbar scroll;
 
     Player player;
     Item[,] playerInv;
@@ -287,7 +288,7 @@ public class InventoryUI : MonoBehaviour, IPanel, IHover
         else
         {
             hoverTick = 0;
-            if(tooltipAppeared)
+            if (tooltipAppeared)
             {
                 StartCoroutine(UIManager.Instance.DisappearTooltip());
                 tooltipAppeared = false;

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3edd0726ba8bd1f498d8913c4e3f7dd3, type: 3}
+  m_Name: Pear
+  m_EditorClassIdentifier: 
+  id: 20484
+  itemName: "\uBC30"
+  description: "\uD1B5\uD1B5\uBC30! \uD280\uC5B4\uB098\uC628 \uBC30! \uB9DB\uC788\uB294
+    \uBC30!"
+  itemSprite: {fileID: -4472909440349568786, guid: b4e12e3ad597a8d48b7ae86b1b46c0f6, type: 3}
+  healthAmount: 0
+  staminaAmount: 0
+  price: 100
